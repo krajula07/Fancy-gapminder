@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <title>CSE 578 - Fall 2020 - Homework #4</title>
+    <link rel='stylesheet' href='css/styles.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://d3js.org/d3.v5.min.js'></script>
+    <script src='scripts/graphs.js'></script>
+  <body>
+    <div class='wrapper'>
+      <h2>Homework #4: Fancy GapMinder</h2>
+      <h3>Kavya Sree Rajula- krajula@asu.edu - </h3>
+      <hr style='width:100%'>
+      <br/>
+      <div class="h-align">
+          <div class="c-align">
+            <label>X axis:</label>   <!-- '&nspb;' adds a space in an HTML line. -->
+            <select id="x-axis-select" onchange="drawScatterPlot(2)">
+                <option value='Income'>Income</option>
+                <option value='Child Mortality'>Child Mortality </option>
+                <option value='Babies per Women'>Babies per Women</option>
+                <option value='CO2 emissions per person'>CO2 emissions per person</option>
+                <option value='Life Expectancy'>Life Expectancy</option>
+                <option value='Population'>Population</option>
+            </select>
+            <label>Y axis:</label>
+            <select id="y-axis-select" onchange="drawScatterPlot(2)">
+                <option value='Life Expectancy'>Life Expectancy</option>
+                <option value='Income'>Income</option>
+                <option value='Child Mortality'>Child Mortality </option>
+                <option value='Babies per Women'>Babies per Women</option>
+                <option value='CO2 emissions per person'>CO2 emissions per person</option>
+                <option value='Population'>Population</option>
+            </select>
+            <label>Region:</label>
+            <select id="region-select" onchange="drawScatterPlot(0)">
+            </select>
+            <label>Year:</label><input type="number" id="year" name="year" min="1800" max="2100" value="2020" onchange="inputChange (0)" style="display:inline;">
+          </div>
+          <div>
+            <svg class="plot">
+            </svg>
+            <div class="h-align">
+                <div class="button-div ml-5" onclick="playGraph()">
+                    <div id="play" class="active">
+                        <i class="fa fa-play" style="font-size:24px;color:white;margin-left: 4px;"></i>
+                    </div>
+                    <div id="pause" class="inactive">
+                        <i class="fa fa-pause" style="font-size:24px;color:white;margin-left: 4px;"></i>
+                    </div></div>
+                <div class="h-align">
+                    <p>1800</p>
+                    <input type="range" class="range" id="year2" name="year" min="1800" max="2100" value="2019" onchange="inputChange(1)">
+                    <p>2100</p>
+                </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>

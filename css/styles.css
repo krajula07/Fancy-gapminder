@@ -1,0 +1,71 @@
+body {
+    font-family:sans-serif;
+}
+
+.wrapper{
+    padding: 0 5% ;
+}
+
+.h-align{
+    display: flex;
+    align-items:center ;
+}
+
+.h-align p{
+    margin: 0px 5px!important;
+}
+
+.ml-5{
+   margin-left: 30px;
+}
+
+.c-align{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin:0px 100px;
+}
+
+.c-align label{
+    color: grey;
+    margin: 30px 0px 10px 0px;
+}
+ 
+.range {
+    width: 650px;
+}
+
+.button-div{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items:center ;
+    background-color: blue;
+    cursor: pointer;
+}
+
+.active{
+    display: block;
+}
+
+.inactive{
+    display: none;
+    visibility: hidden;
+}
+
+.tooltip {
+    position: absolute;
+    margin: 0;
+    vertical-align: middle;
+    line-height: 1.6em;
+    padding: 6px;
+    font-size: 13px;
+    background: white;
+    border: thin solid gray;
+    white-space: pre-wrap;
+    border-radius: 3px;
+    pointer-events: none;
+
+  }
